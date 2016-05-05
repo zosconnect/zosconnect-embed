@@ -1,5 +1,7 @@
 ### z/OS Connect Enterprise Edition embedding feature
 
+Configuration files to create a Liberty feature which allows z/OS Connect Enterprise Edition to be run in a standalone WebSphere Liberty server.
+
 #### Create ifaedjreg Bundle
 
 Run the command `java -jar cvmf ifaedjreg/MANIFEST.MF com.ibm.zosconnect.sample.ifaedjreg-1.0.jar`
