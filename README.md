@@ -2,6 +2,8 @@
 
 Configuration files to create a Liberty feature which allows z/OS Connect Enterprise Edition to be run in a standalone WebSphere Liberty server.
 
+This requires WebSphere Liberty V8.5.5.8 or higher.
+
 #### Create ifaedjreg Bundle
 
 Run the command `java -jar cvmf ifaedjreg/MANIFEST.MF com.ibm.zosconnect.sample.ifaedjreg-1.0.jar`
