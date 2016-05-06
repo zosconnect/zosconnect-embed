@@ -6,7 +6,7 @@ This requires WebSphere Liberty V8.5.5.8 or higher.
 
 #### Create ifaedjreg Bundle
 
-Run the command `java -jar cvmf ifaedjreg/MANIFEST.MF com.ibm.zosconnect.sample.ifaedjreg-1.0.jar`
+Run the command `jar -cvmf ifaedjreg/MANIFEST.MF com.ibm.zosconnect.sample.ifaedjreg-1.0.jar`
 
 #### Add the necessary files to the Liberty server
 
