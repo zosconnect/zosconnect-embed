@@ -11,8 +11,8 @@ Run the command `jar -cvmf ifaedjreg/MANIFEST.MF com.ibm.zosconnect.sample.ifaed
 #### Add the necessary files to the Liberty server
 
 1. Copy the file `zosconnect.properties` to `wlp/etc/extensions/`. If you modified the location of the z/OS Connect EE install from the default then you will need to update this file to include that modificiation.
-2. Copy the file `com.ibm.zosconnect.sample.ifaedjreg-1.0.jar` to `wlp/usr/extensions`
-3. Copy the file `zosConnectEmbed.mf` to `wlp/usr/extensions/features`
+2. Copy the file `com.ibm.zosconnect.sample.ifaedjreg-1.0.jar` to `wlp/usr/extension/lib`
+3. Copy the file `zosConnectEmbed.mf` to `wlp/usr/extension/lib/features`
 
 #### Configure the Liberty server
 
