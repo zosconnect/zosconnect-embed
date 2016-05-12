@@ -11,8 +11,10 @@ Run the command `jar -cvmf ifaedjreg/MANIFEST.MF com.ibm.zosconnect.sample.ifaed
 #### Add the necessary files to the Liberty server
 
 1. Copy the file `zosconnect.properties` to `wlp/etc/extensions/`. If you modified the location of the z/OS Connect EE install from the default then you will need to update this file to include that modificiation.
-2. Copy the file `com.ibm.zosconnect.sample.ifaedjreg-1.0.jar` to `wlp/usr/extension/lib`
-3. Copy the file `zosConnectEmbed.mf` to `wlp/usr/extension/lib/features`
+2. Copy the file `com.ibm.zosconnect.sample.ifaedjreg-1.0.jar` to `$WLP_USER_DIR/extension/lib`
+3. Copy the file `zosConnectEmbed.mf` to `$WLP_USER_DIR/extension/lib/features`
+
+By default `$WLP_USER_DIR` is the `usr` directory under the WebSphere Liberty install directory.
 
 *Note:* If transferring these files via ftp to the mainframe, all of them should be transferred as binary.
 
@@ -24,6 +26,10 @@ Add the feature
 <feature>usr:zosconnectembed-1.0</feature>
 ```
 to `server.xml` and configure z/OS Connect EE as per the product documentation.
+
+Copy the `bootstrap.properties` file to server directory or add the contents to your existing `bootstrap.properties` file.
+
+*Note:* If transferring this file via ftp to the mainframe it should be transferred as binary.
 
 #### License
 
