@@ -14,12 +14,14 @@ Run the command `jar -cvmf ifaedjreg/MANIFEST.MF com.ibm.zosconnect.sample.ifaed
 2. Copy the file `com.ibm.zosconnect.sample.ifaedjreg-1.0.jar` to `wlp/usr/extension/lib`
 3. Copy the file `zosConnectEmbed.mf` to `wlp/usr/extension/lib/features`
 
+*Note:* If transferring these files via ftp to the mainframe, all of them should be transferred as binary.
+
 #### Configure the Liberty server
 
 Add the feature
 
 ```
-<feature>usr:zosConnectEmbed-1.0</feature>
+<feature>usr:zosconnectembed-1.0</feature>
 ```
 to `server.xml` and configure z/OS Connect EE as per the product documentation.
 
