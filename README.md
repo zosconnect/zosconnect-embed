@@ -1,8 +1,10 @@
 ### z/OS Connect Enterprise Edition embedding feature
 
-Configuration files to create a Liberty feature which allows z/OS Connect Enterprise Edition to be run in a standalone WebSphere Liberty server.
+Configuration files to create a Liberty feature which allows z/OS Connect Enterprise Edition open beta to be run in a standalone WebSphere Liberty server.
 
-This requires WebSphere Liberty V8.5.5.8 or higher.
+This requires WebSphere Liberty V8.5.5.8 or higher with the [Java EE Web Profile 7.0](https://developer.ibm.com/wasdev/downloads/#asset/features-com.ibm.websphere.appserver.webProfile-7.0) feature installed.
+
+Please note this is an experimental feature for use only with the z/OS Connect EE open beta. The are no guarantees that this will become a supported option in a production environment.
 
 #### Create ifaedjreg Bundle
 
