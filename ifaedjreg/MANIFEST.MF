@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: com.ibm.zosconnect.sample.ifaedjreg
-Bundle-SymbolicName: com.ibm.zosconnect.sample.ifaedjreg
-Export-Package: com.ibm.zos.smf
-Bundle-Version: 1.0.0
-Bundle-ClassPath: external:/usr/include/java_classes/ifaedjreg.jar,
- external:$java.home$/lib/ibmpkcs.jar
-Bundle-NativeCode: external:/usr/lib/java_runtime/libifaedjreg64.so

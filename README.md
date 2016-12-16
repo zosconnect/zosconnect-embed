@@ -1,31 +1,25 @@
-### z/OS Connect Enterprise Edition embedding feature
+### z/OS Connect Enterprise Edition embedding instructions
 
 Configuration files to create a Liberty feature which allows z/OS Connect Enterprise Edition open beta to be run in a standalone WebSphere Liberty server.
 
-This requires WebSphere Liberty V8.5.5.8 or higher with the [Java EE Web Profile 7.0](https://developer.ibm.com/wasdev/downloads/#asset/features-com.ibm.websphere.appserver.webProfile-7.0) feature installed.
+This requires WebSphere Liberty V16.0.0.3 or higher with the [Java EE Web Profile 7.0](https://developer.ibm.com/wasdev/downloads/#asset/features-com.ibm.websphere.appserver.webProfile-7.0) feature installed.
 
 Please note this is an experimental feature for use only with the z/OS Connect EE open beta. The are no guarantees that this will become a supported option in a production environment.
 
-#### Create ifaedjreg Bundle
+#### Configure the Liberty installation
 
-Run the command `jar -cvmf ifaedjreg/MANIFEST.MF com.ibm.zosconnect.sample.ifaedjreg-1.0.jar`
-
-#### Add the necessary files to the Liberty server
-
-1. Copy the file `zosconnect.properties` to `wlp/etc/extensions/`. If you modified the location of the z/OS Connect EE install from the default then you will need to update this file to include that modificiation.
-2. Copy the file `com.ibm.zosconnect.sample.ifaedjreg-1.0.jar` to `$WLP_USER_DIR/extension/lib`
-3. Copy the file `zosConnectEmbed.mf` to `$WLP_USER_DIR/extension/lib/features`
+Copy the `zosconnect.properties` file to `wlp/etc/extensions/`. If you modified the location of the z/OS Connect EE install from the default then you will need to update this file to include that modification.
 
 By default `$WLP_USER_DIR` is the `usr` directory under the WebSphere Liberty install directory.
 
-*Note:* If transferring these files via ftp to the mainframe, all of them should be transferred as binary.
+*Note:* If transferring this file via ftp to the mainframe it should be transferred as binary.
 
 #### Configure the Liberty server
 
 Add the feature
 
 ```
-<feature>usr:zosconnectembed-1.0</feature>
+<feature>zosconnect:zosconnect-2.0</feature>
 ```
 to `server.xml` and configure z/OS Connect EE as per the product documentation.
 
