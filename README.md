@@ -10,8 +10,6 @@ Please note this is an experimental feature for use only with the z/OS Connect E
 
 Copy the `zosconnect.properties` file to `wlp/etc/extensions/`. If you modified the location of the z/OS Connect EE install from the default then you will need to update this file to include that modification.
 
-By default `$WLP_USER_DIR` is the `usr` directory under the WebSphere Liberty install directory.
-
 *Note:* If transferring this file via ftp to the mainframe it should be transferred as binary.
 
 #### Configure the Liberty server
