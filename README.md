@@ -1,4 +1,4 @@
-### z/OS Connect Enterprise Edition embedding instructions
+# z/OS Connect Enterprise Edition embedding instructions
 
 Configuration files to create a Liberty feature which allows z/OS Connect Enterprise Edition open beta to be run in a standalone WebSphere Liberty server.
 
@@ -16,18 +16,21 @@ Copy the `zosconnect.properties` file to `wlp/etc/extensions/`. If you modified 
 
 Add the feature
 
-```
+```xml
 <feature>zosconnect:zosconnect-2.0</feature>
 ```
+
 to `server.xml` and configure z/OS Connect EE as per the product documentation.
 
 Copy the `bootstrap.properties` file to server directory or add the contents to your existing `bootstrap.properties` file.
 
 *Note:* If transferring this file via ftp to the mainframe it should be transferred as binary.
 
+The `LIBPATH` environment variable in the address space for the server needs to include the `/usr/lpp/IBM/zosconnect/v3r0/runtime/lib/zos/native` directory. If you modified the location of the z/OS Connect EE install from the default then this location should be updated to include that modification.
+
 #### License
 
-```
+```text
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
